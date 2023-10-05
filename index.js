@@ -1,3 +1,11 @@
+/*******************************************************************************/
+/* DOMContentLoaded event listener, triggers when the webpage is fully loaded. */ 
+/* It calls the getBrewery function to start fetching  brewery data.           */
+/*******************************************************************************/
+document.addEventListener('DOMContentLoaded', function() {
+  getBrewery();
+});
+
 /**********************************************************************/
 /* Get list of breweries from the API                                 */
 /**********************************************************************/
@@ -89,7 +97,3 @@ function handleStateClick(state, stateBreweries){
   //    breweryInfo.innerHTML = `<p>No breweries found for ${state}.</p>`;
   //}
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  getBrewery();
-});
