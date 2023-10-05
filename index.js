@@ -4,13 +4,15 @@ function getBrewery() {
   .then(response => response.json())              // Convert the response to a JSON object
   .then(object => window.renderStates(object))    // Call renderStates function to manipulate data
 }
-  
+
+/* Function that displays brewery states. 
+   When a state is clicked a list of breweries for that state appears*/
 function renderStates(states) {
-  const stateTable = document.querySelector('#stateTable');
-  const uniqueStates = new Set();       // Create a Set to store unique states
-  const stateBreweries = {};            // To store breweries by state
-  let currentRow;                       // To keep track of the current row being built
-  let cellsInCurrentRow = 0;            // To count the cells in the current row
+  const stateTable = document.querySelector('#stateTable'); // Select HTML table where states will be displayed
+  const uniqueStates = new Set();                           // Create a Set to store unique states
+  const stateBreweries = {};                                // To store breweries by state
+  let currentRow;                                           // To keep track of the current row being built
+  let cellsInCurrentRow = 0;                                // To count the cells in the current row
 
   states.forEach(brewery => {
     const state = brewery.state;
