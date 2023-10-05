@@ -47,9 +47,9 @@ function renderStates(states) {
         cell.style.backgroundColor = '';
       });
 
-      currentRow.appendChild(cell);
-      uniqueStates.add(state); // Add the state to the Set to mark it as encountered
-      cellsInCurrentRow++;
+      currentRow.appendChild(cell); // Append the cell to the current row in the table
+      uniqueStates.add(state);      // Add the state to the Set to mark it as encountered
+      cellsInCurrentRow++;          // Increment counter
       
       if (cellsInCurrentRow === 5) {
         cellsInCurrentRow = 0;
