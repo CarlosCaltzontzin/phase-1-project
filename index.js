@@ -32,17 +32,19 @@ function renderStates(states) {
       const cell = document.createElement('td');  // Create a new table cell 
       cell.textContent = state;                   // Cell content is the state name
       
+      // Click event listener, call function handleStateClick when a state is clicked
       cell.addEventListener('click', () => {
-        handleStateClick(state, stateBreweries);  // Handle the click event
+        handleStateClick(state, stateBreweries);
       });
 
-      // Add event listeners for mouseover and mouseout
+      // Mouseover event listener, change background color of a state cell
       cell.addEventListener('mouseover', () => {
-        cell.style.backgroundColor = 'lightblue'; // Change the background color on mouseover
+        cell.style.backgroundColor = 'lightblue';
       });
 
+      // Mouseout event listener, Reset the state cell background color
       cell.addEventListener('mouseout', () => {
-        cell.style.backgroundColor = ''; // Reset the background color on mouseout
+        cell.style.backgroundColor = '';
       });
 
       currentRow.appendChild(cell);
