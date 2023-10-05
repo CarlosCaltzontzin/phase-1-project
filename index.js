@@ -9,8 +9,8 @@ function getBrewery() {
    When a state is clicked a list of breweries for that state appears*/
 function renderStates(states) {
   const stateTable = document.querySelector('#stateTable'); // Select HTML table where states will be displayed
-  const uniqueStates = new Set();                           // Create a Set to store unique states
-  const stateBreweries = {};                                // To store breweries by state
+  const uniqueStates = new Set();                           // Create empty Set to store unique states
+  const stateBreweries = {};                                // Create empty object to store breweries by state
   let currentRow;                                           // To keep track of the current row being built
   let cellsInCurrentRow = 0;                                // To count the cells in the current row
 
