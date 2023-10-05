@@ -1,4 +1,6 @@
-/* Get list of breweries from the API */ 
+/**************************************/
+/* Get list of breweries from the API */
+/**************************************/
 function getBrewery() {
   return fetch("https://api.openbrewerydb.org/breweries")
   .then(response => response.json())              // Convert the response to a JSON object
@@ -14,12 +16,14 @@ function renderStates(states) {
   let currentRow;                                           // To keep track of the current row being built
   let cellsInCurrentRow = 0;                                // To count the cells in the current row
 
-  /* Iterate through the brewery data obtained from the API and processes each brewery one by one */
+  // Iterate through the brewery data obtained from the API and processes each brewery one by one
   states.forEach(brewery => {
-    const state = brewery.state;
+    const state = brewery.state;        // Get state
     if (!uniqueStates.has(state)){      // Check if the state is not in the Set
-      if (cellsInCurrentRow === 0) {
-        currentRow = document.createElement('tr');
+
+      // Create new table row if the current cell is 0 
+      if (cellsInCurrentRow === 0){
+        currentRow = document.createElement('tr'); 
         stateTable.appendChild(currentRow);
       }
       
