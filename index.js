@@ -31,7 +31,6 @@ function renderStates(states) {
       
       const cell = document.createElement('td');  // Create a new table cell 
       cell.textContent = state;                   // Cell content is the state name
-      cell.classList.add('state-cell');           // Add a class to the cell for styling
       
       cell.addEventListener('click', () => {
         handleStateClick(state, stateBreweries);  // Handle the click event
