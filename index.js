@@ -23,18 +23,18 @@ function renderStates(states) {
     const state = brewery.state;        // Get state
     if (!uniqueStates.has(state)){      // Check if the state is not in the Set
 
-      // Create new table row if the current cell is 0 
+      // If the current cell is 0, create a new table row
       if (cellsInCurrentRow === 0){
         currentRow = document.createElement('tr'); 
         stateTable.appendChild(currentRow);
       }
       
-      const cell = document.createElement('td');
-      cell.textContent = state;
-      cell.classList.add('state-cell'); // Add a class to the cell for styling
+      const cell = document.createElement('td');  // Create a new table cell 
+      cell.textContent = state;                   // Cell content is the state name
+      cell.classList.add('state-cell');           // Add a class to the cell for styling
       
       cell.addEventListener('click', () => {
-        handleStateClick(state, stateBreweries); // Handle the click event
+        handleStateClick(state, stateBreweries);  // Handle the click event
       });
 
       // Add event listeners for mouseover and mouseout
