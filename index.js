@@ -1,7 +1,8 @@
+/* Get list of breweries from the API */ 
 function getBrewery() {
   return fetch("https://api.openbrewerydb.org/breweries")
-  .then(response => response.json())
-  .then(object => window.renderStates(object))
+  .then(response => response.json())              // Convert the response to a JSON object
+  .then(object => window.renderStates(object))    // Call renderStates function to manipulate data
 }
   
 function renderStates(states) {
