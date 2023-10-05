@@ -51,7 +51,8 @@ function renderStates(states) {
       uniqueStates.add(state);      // Add the state to the Set to mark it as encountered
       cellsInCurrentRow++;          // Increment counter
       
-      if (cellsInCurrentRow === 5) {
+      // Reset cell counter if cell === 5
+      if (cellsInCurrentRow === 5){
         cellsInCurrentRow = 0;
       }
       
