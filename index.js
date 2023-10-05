@@ -6,18 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
   getBrewery();
 });
 
-/**********************************************************************/
-/* Get list of breweries from the API                                 */
-/**********************************************************************/
+/*******************************************************************************/
+/* Get list of breweries from the API                                          */
+/*******************************************************************************/
 function getBrewery(){
   return fetch("https://api.openbrewerydb.org/breweries")
   .then(response => response.json())              // Convert the response to a JSON object
   .then(object => window.renderStates(object))    // Call renderStates function to manipulate data
 }
 
-/**********************************************************************/
-/* Function that displays brewery states.                             */ 
-/**********************************************************************/
+/*******************************************************************************/
+/* Function that displays brewery states.                                      */ 
+/*******************************************************************************/
 function renderStates(states){
   const stateTable = document.querySelector('#stateTable'); // Select HTML table where states will be displayed
   const uniqueStates = new Set();                           // Create empty Set to store unique states
@@ -75,10 +75,10 @@ function renderStates(states){
   //stateTable.dataset.stateBreweries = JSON.stringify(stateBreweries);
 }
 
-/**********************************************************************/
-/* Function to handle the click event for states                      */ 
-/* When a state is clicked a list of breweries for that state appears */
-/**********************************************************************/
+/*******************************************************************************/
+/* Function to handle the click event for states                               */ 
+/* When a state is clicked a list of breweries for that state appears          */
+/*******************************************************************************/
 function handleStateClick(state, stateBreweries){
   const breweryInfo = document.querySelector('#breweryInfo'); // Select HTML list where brewery info will be displayed
   const breweries = stateBreweries[state]; // Breweries for the clicked state from the stateBreweries object
