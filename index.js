@@ -9,7 +9,6 @@ function getBrewery() {
 
 /**********************************************************************/
 /* Function that displays brewery states.                             */ 
-/* When a state is clicked a list of breweries for that state appears */
 /**********************************************************************/
 function renderStates(states) {
   const stateTable = document.querySelector('#stateTable'); // Select HTML table where states will be displayed
@@ -60,14 +59,18 @@ function renderStates(states) {
       stateBreweries[state] = [];
     }
     
-    // Add the brewery to the state's breweries array
+    // Add the brewery's name and address to the state's breweries array
     stateBreweries[state].push({ name: brewery.name, address: brewery.address_1});
   });
   
   // Store state breweries data for later use
-  stateTable.dataset.stateBreweries = JSON.stringify(stateBreweries);
+  //stateTable.dataset.stateBreweries = JSON.stringify(stateBreweries);
 }
 
+/**********************************************************************/
+/* Function to handle the click event for states                      */ 
+/* When a state is clicked a list of breweries for that state appears */
+/**********************************************************************/
 // Function to handle the click event for states
 function handleStateClick(state, stateBreweries) {
   const breweryInfo = document.querySelector('#breweryInfo');
