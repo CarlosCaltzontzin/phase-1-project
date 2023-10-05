@@ -1,7 +1,7 @@
 /**********************************************************************/
 /* Get list of breweries from the API                                 */
 /**********************************************************************/
-function getBrewery() {
+function getBrewery(){
   return fetch("https://api.openbrewerydb.org/breweries")
   .then(response => response.json())              // Convert the response to a JSON object
   .then(object => window.renderStates(object))    // Call renderStates function to manipulate data
@@ -10,7 +10,7 @@ function getBrewery() {
 /**********************************************************************/
 /* Function that displays brewery states.                             */ 
 /**********************************************************************/
-function renderStates(states) {
+function renderStates(states){
   const stateTable = document.querySelector('#stateTable'); // Select HTML table where states will be displayed
   const uniqueStates = new Set();                           // Create empty Set to store unique states
   const stateBreweries = {};                                // Create empty object to store breweries by state
@@ -71,12 +71,11 @@ function renderStates(states) {
 /* Function to handle the click event for states                      */ 
 /* When a state is clicked a list of breweries for that state appears */
 /**********************************************************************/
-// Function to handle the click event for states
-function handleStateClick(state, stateBreweries) {
-  const breweryInfo = document.querySelector('#breweryInfo');
-  const breweries = stateBreweries[state];
+function handleStateClick(state, stateBreweries){
+  const breweryInfo = document.querySelector('#breweryInfo'); // Select HTML list where brewery info will be displayed
+  const breweries = stateBreweries[state]; // Breweries for the clicked state from the stateBreweries object
 
-  if (breweries) {
+  if (breweries){
       breweryInfo.innerHTML = `<h3>Breweries in ${state}:</h3>`;
       const ul = document.createElement('ul');
       breweries.forEach(brewery => {
