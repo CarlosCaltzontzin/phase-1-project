@@ -1,14 +1,16 @@
-/**************************************/
-/* Get list of breweries from the API */
-/**************************************/
+/**********************************************************************/
+/* Get list of breweries from the API                                 */
+/**********************************************************************/
 function getBrewery() {
   return fetch("https://api.openbrewerydb.org/breweries")
   .then(response => response.json())              // Convert the response to a JSON object
   .then(object => window.renderStates(object))    // Call renderStates function to manipulate data
 }
 
-/* Function that displays brewery states. 
-   When a state is clicked a list of breweries for that state appears*/
+/**********************************************************************/
+/* Function that displays brewery states.                             */ 
+/* When a state is clicked a list of breweries for that state appears */
+/**********************************************************************/
 function renderStates(states) {
   const stateTable = document.querySelector('#stateTable'); // Select HTML table where states will be displayed
   const uniqueStates = new Set();                           // Create empty Set to store unique states
