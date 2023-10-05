@@ -84,16 +84,12 @@ function handleStateClick(state, stateBreweries){
   const breweries = stateBreweries[state]; // Breweries for the clicked state from the stateBreweries object
 
   //Display all breweries name and address for the state clicked
-  //if (breweries){
-      breweryInfo.innerHTML = `<h3>Breweries in ${state}:</h3>`;
-      const ul = document.createElement('ul');
-      breweries.forEach(brewery => {
-          const li = document.createElement('li');
-          li.innerHTML = `<strong>${brewery.name}</strong><br>${brewery.address}`;
-          ul.appendChild(li);
-      });
-      breweryInfo.appendChild(ul);
- // } else {
-  //    breweryInfo.innerHTML = `<p>No breweries found for ${state}.</p>`;
-  //}
+  breweryInfo.innerHTML = `<h3>Breweries in ${state}:</h3>`;
+  const ul = document.createElement('ul');
+  breweries.forEach(brewery => {
+    const li = document.createElement('li');
+    li.innerHTML = `<strong>${brewery.name}</strong><br>${brewery.address}`;
+    ul.appendChild(li);
+  });
+  breweryInfo.appendChild(ul);
 }
