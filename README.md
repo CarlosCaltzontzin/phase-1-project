@@ -15,8 +15,7 @@ There arn't any dependencies
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+No installation required
 
 ### Executing program
 
