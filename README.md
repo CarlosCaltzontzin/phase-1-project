@@ -3,7 +3,9 @@
 ## Project Description
 
 For my phase-1 project at Flatiron school I created a simple brewery directory. 
-My app uses HTML/CSS/JS as a frontend that accesses data from a public API. The public API, https://api.openbrewerydb.org/breweries, is free and require no authorization. 
+My app uses HTML/CSS/JS as a frontend and accesses data from a public API. The public API, https://api.openbrewerydb.org/breweries, is free and require no authorization. 
+
+Once the app loads, it will display all distinct states from the API. When you click on a state, it will display a list of brewery names and addresses for that state. A simple directory. 
 
 ## Getting Started
 
