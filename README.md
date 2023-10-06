@@ -15,11 +15,11 @@ To install, download onto your local terminal
 
 1. Copy the SSH under the Clone tab
 2. On your local terminal do a ```git clone``` command
-3. enter ```explorer.exe index.html``` to open website
+3. Enter ```explorer.exe index.html``` to open website
 
 ### Executing program
 
-To run the app simply open up the webpage
+To run the app simply open up the webpage after cloning the repository
 
 ## Help
 
