@@ -9,15 +9,13 @@ Once the app loads, it will display all distinct states from the API. When you c
 
 ## Getting Started
 
-### Dependencies
-
-There arn't any dependencies
-
 ### Installing
 
 To install, download onto your local terminal
 
 1. Copy the SSH under the Clone tab
+2. On your local terminal do a ```git clone``` command
+3. enter ```explorer.exe index.html``` to open website
 
 ### Executing program
 
