@@ -11,8 +11,7 @@ Once the app loads, it will display all distinct states from the API. When you c
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+There arn't any dependencies
 
 ### Installing
 
