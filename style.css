@@ -29,8 +29,9 @@ h1 {
     -webkit-text-stroke: 1px rgba(239, 236, 204, 0.55);
 }
 
+/* Attributes for table elements*/
 table {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
     width: 100%;
-  }
+}
