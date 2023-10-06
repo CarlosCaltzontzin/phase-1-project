@@ -1,4 +1,4 @@
-# Project Title
+# Flatiron School Phase 1 Project - Brewery Directory
 
 Simple overview of use/purpose.
 
