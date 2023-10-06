@@ -1,8 +1,8 @@
 # Flatiron School Phase 1 Project - Brewery Directory
 
-## Description
+## Project Description
 
-An in-depth paragraph about your project and overview of use.
+For my phase-1 project at Flatiron school I created a simple Brewery directory.  
 
 ## Getting Started
 
