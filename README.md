@@ -15,15 +15,13 @@ There arn't any dependencies
 
 ### Installing
 
-No installation required
+To install, download onto your local terminal
+
+1. Copy the SSH under the Clone tab
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+To run the app simply open up the webpage
 
 ## Help
 
