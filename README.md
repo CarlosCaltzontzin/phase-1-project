@@ -2,7 +2,8 @@
 
 ## Project Description
 
-For my phase-1 project at Flatiron school I created a simple Brewery directory.  
+For my phase-1 project at Flatiron school I created a simple brewery directory. 
+My app uses HTML/CSS/JS as a frontend that accesses data from a public API. The public API, https://api.openbrewerydb.org/breweries, is free and require no authorization. 
 
 ## Getting Started
 
