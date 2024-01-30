@@ -43,9 +43,10 @@ function renderStates(states){
   let currentRow;                                           // To keep track of the current row being built
   let cellsInCurrentRow = 0;                                // To count the cells in the current row
 
-  // Iterate through the brewery data obtained from the API and processes each brewery one by one
+  // Iterate through the brewery data obtained from the API and process each brewery one by one
   states.forEach(brewery => {
     const state = brewery.state;        // Get state
+
     if (!uniqueStates.has(state)){      // Check if the state is not in the Set
 
       // If the current cell is 0, create a new table row
@@ -89,6 +90,7 @@ function renderStates(states){
     stateBreweries[state].push({ name: brewery.name, address: brewery.address_1});
   });
 }
+
 
 /*******************************************************************************/
 /* Function to handle the click event for states                               */ 

@@ -19,7 +19,11 @@ To install, download onto your local terminal
 
 ### Executing program
 
-To run the app simply open up the webpage after cloning the repository
+To run the app simply open up the webpage after cloning the repository by entering the followwing command
+
+```bash
+explorer.exe index.html
+```
 
 ## Acknowledgments
 
