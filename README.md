@@ -13,13 +13,16 @@ Once the app loads, it will display all distinct states from the API. When you c
 
 To install, download onto your local terminal
 
-1. Copy the SSH under the Clone tab
-2. On your local terminal do a ```git clone``` command
-3. Enter ```explorer.exe index.html``` to open website
+1. Copy the SSH under the Code tab
+2. On your local terminal do a ```git clone``` command:
+
+```bash
+git clone git@github.com:CarlosCaltzontzin/phase-1-project.git
+```
 
 ### Executing program
 
-To run the app simply open up the webpage after cloning the repository by entering the followwing command
+Open up the webpage by entering the following command:
 
 ```bash
 explorer.exe index.html
