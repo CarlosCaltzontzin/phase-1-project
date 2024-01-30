@@ -6,32 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
   fetch("https://api.openbrewerydb.org/breweries")
   .then(response => response.json())                        // Convert the response to a JSON object
   .then(data => renderStates(data))                         // Call renderStates function to manipulate data
-})
-
-/**********************************************************************************/
-/* The DOMContentLoaded event listener triggers when the webpage is fully loaded. */
-/* It calls the getBrewery function to start fetching brewery data.               */
-/*                                                                                */
-/* Syntax: document.addEventListener(eventType, callbackFunction);                */
-/*                                                                                */
-/* Arrow function is the same as:                                                 */
-/* document.addEventListener('DOMContentLoaded', function() {                     */
-/*   getBrewery();                                                                */
-/* });                                                                            */
-/**********************************************************************************/
-//document.addEventListener('DOMContentLoaded', () => getBrewery());
-
-/*******************************************************************************/
-/* Get the list of breweries from the API                                      */
-/*******************************************************************************/
-
-/*
-function getBrewery(){
-  return fetch("https://api.openbrewerydb.org/breweries")
-  .then(response => response.json())                        // Convert the response to a JSON object
-  .then(object => renderStates(object))                     // Call renderStates function to manipulate data
-}
-*/
+});
 
 /*******************************************************************************/
 /* Function that displays brewery states                                       */ 
@@ -47,7 +22,7 @@ function renderStates(states){
   states.forEach(brewery => {
     const state = brewery.state;        // Get state
 
-    if (!uniqueStates.has(state)){      // Check if the state is not in the Set
+    if (!uniqueStates.has(state)){      // If the state is not in the Set, do the following
 
       // If the current cell is 0, create a new table row
       if (cellsInCurrentRow === 0){
