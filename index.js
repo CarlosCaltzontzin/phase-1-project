@@ -1,5 +1,15 @@
+/*************************************************************************************/
+/* The DOMContentLoaded event listener triggers when the webpage is fully loaded.    */
+/* It fetches the list of breweries from an API and calls the renderStates function. */
+/*************************************************************************************/
+document.addEventListener('DOMContentLoaded', function(){
+  fetch("https://api.openbrewerydb.org/breweries")
+  .then(response => response.json())                        // Convert the response to a JSON object
+  .then(data => renderStates(data))                         // Call renderStates function to manipulate data
+})
+
 /**********************************************************************************/
-/* The DOMContentLoaded event listener triggers when the webpage is fully loaded. */ 
+/* The DOMContentLoaded event listener triggers when the webpage is fully loaded. */
 /* It calls the getBrewery function to start fetching brewery data.               */
 /*                                                                                */
 /* Syntax: document.addEventListener(eventType, callbackFunction);                */
@@ -9,19 +19,22 @@
 /*   getBrewery();                                                                */
 /* });                                                                            */
 /**********************************************************************************/
-document.addEventListener('DOMContentLoaded', () => getBrewery());
+//document.addEventListener('DOMContentLoaded', () => getBrewery());
 
 /*******************************************************************************/
 /* Get the list of breweries from the API                                      */
 /*******************************************************************************/
+
+/*
 function getBrewery(){
   return fetch("https://api.openbrewerydb.org/breweries")
   .then(response => response.json())                        // Convert the response to a JSON object
   .then(object => renderStates(object))                     // Call renderStates function to manipulate data
 }
+*/
 
 /*******************************************************************************/
-/* Function that displays brewery states.                                      */ 
+/* Function that displays brewery states                                       */ 
 /*******************************************************************************/
 function renderStates(states){
   const stateTable = document.querySelector('#stateTable'); // Select HTML table where states will be displayed
