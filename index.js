@@ -1,7 +1,9 @@
-/*******************************************************************************/
-/* DOMContentLoaded event listener, triggers when the webpage is fully loaded. */ 
-/* It calls the getBrewery function to start fetching  brewery data.           */
-/*******************************************************************************/
+/**********************************************************************************/
+/* The DOMContentLoaded event listener triggers when the webpage is fully loaded. */ 
+/* It calls the getBrewery function to start fetching brewery data.               */
+/*                                                                                */
+/* Syntax: document.addEventListener(eventType, callbackFunction);                */
+/**********************************************************************************/
 document.addEventListener('DOMContentLoaded', function() {
   getBrewery();
 });
@@ -70,9 +72,6 @@ function renderStates(states){
     // Add the brewery's name and address to the state's breweries array
     stateBreweries[state].push({ name: brewery.name, address: brewery.address_1});
   });
-  
-  // Store state breweries data for later use
-  //stateTable.dataset.stateBreweries = JSON.stringify(stateBreweries);
 }
 
 /*******************************************************************************/
