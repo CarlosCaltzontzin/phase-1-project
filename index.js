@@ -3,10 +3,13 @@
 /* It calls the getBrewery function to start fetching brewery data.               */
 /*                                                                                */
 /* Syntax: document.addEventListener(eventType, callbackFunction);                */
+/*                                                                                */
+/* Arrow function is the same as:                                                 */
+/* document.addEventListener('DOMContentLoaded', function() {                     */
+/*   getBrewery();                                                                */
+/* });                                                                            */
 /**********************************************************************************/
-document.addEventListener('DOMContentLoaded', function() {
-  getBrewery();
-});
+document.addEventListener('DOMContentLoaded', () => getBrewery());
 
 /*******************************************************************************/
 /* Get list of breweries from the API                                          */
