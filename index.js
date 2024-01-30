@@ -12,12 +12,12 @@
 document.addEventListener('DOMContentLoaded', () => getBrewery());
 
 /*******************************************************************************/
-/* Get list of breweries from the API                                          */
+/* Get the list of breweries from the API                                      */
 /*******************************************************************************/
 function getBrewery(){
   return fetch("https://api.openbrewerydb.org/breweries")
-  .then(response => response.json())              // Convert the response to a JSON object
-  .then(object => window.renderStates(object))    // Call renderStates function to manipulate data
+  .then(response => response.json())                        // Convert the response to a JSON object
+  .then(object => renderStates(object))                     // Call renderStates function to manipulate data
 }
 
 /*******************************************************************************/
