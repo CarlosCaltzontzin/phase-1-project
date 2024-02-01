@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', function(){
 /* Function that displays brewery states                                       */ 
 /*******************************************************************************/
 function renderStates(states){
-  const stateTable = document.querySelector('#stateTable'); // Select HTML table where states will be displayed
-  const uniqueStates = new Set();                           // Create empty Set to store unique states
-  const stateBreweries = {};                                // Create empty object to store breweries by state
+  // Select the HTML table with the id stateTable where the states will be displayed
+  const stateTable = document.querySelector('#stateTable');
+  const uniqueStates = new Set();                           // Create an empty Set (object) to store unique states
+  const stateBreweries = {};                                // Create an empty object to store breweries by state
   let currentRow;                                           // To keep track of the current row being built
   let cellsInCurrentRow = 0;                                // To count the cells in the current row
 
@@ -30,29 +31,23 @@ function renderStates(states){
         stateTable.appendChild(currentRow);
       }
       
-      const cell = document.createElement('td');  // Create a new table cell 
-      cell.textContent = state;                   // Cell content is the state name
+      const cell = document.createElement('td');  // Create a new table cell for the state name
+      cell.textContent = state;                   // Set the content of the cell to the state name
       
-      // Click event listener, call function handleStateClick when a state is clicked
-      cell.addEventListener('click', () => {
-        handleStateClick(state, stateBreweries);
-      });
+      // Click event listener, when a state is clicked call the function handleStateClick
+      cell.addEventListener('click', () => { handleStateClick(state, stateBreweries); });
 
       // Mouseover event listener, change background color of a state cell
-      cell.addEventListener('mouseover', () => {
-        cell.style.backgroundColor = 'lightblue';
-      });
+      cell.addEventListener('mouseover', () => { cell.style.backgroundColor = 'lightblue'; });
 
       // Mouseout event listener, Reset the state cell background color
-      cell.addEventListener('mouseout', () => {
-        cell.style.backgroundColor = '';
-      });
+      cell.addEventListener('mouseout', () => { cell.style.backgroundColor = ''; });
 
       currentRow.appendChild(cell); // Append the cell to the current row in the table
-      uniqueStates.add(state);      // Add the state to the Set to mark it as encountered
+      uniqueStates.add(state);      // Add the state to the Set of unique states
       cellsInCurrentRow++;          // Increment counter
       
-      // Reset cell counter if cell === 5
+      // Reset the cell counter if cell === 5, indicating a new row
       if (cellsInCurrentRow === 5){
         cellsInCurrentRow = 0;
       }
@@ -72,16 +67,19 @@ function renderStates(states){
 /* When a state is clicked a list of breweries for that state appears          */
 /*******************************************************************************/
 function handleStateClick(state, stateBreweries){
-  const breweryInfo = document.querySelector('#breweryInfo'); // Select HTML list where brewery info will be displayed
+  // Select the HTML list with the id breweryInfo where brewery information will be displayed
+  const breweryInfo = document.querySelector('#breweryInfo');
   const breweries = stateBreweries[state]; // Breweries for the clicked state from the stateBreweries object
 
   //Display all breweries name and address for the state clicked
-  breweryInfo.innerHTML = `<h3>Breweries in ${state}:</h3>`;
-  const ul = document.createElement('ul');
-  breweries.forEach(brewery => {
-    const li = document.createElement('li');
-    li.innerHTML = `<strong>${brewery.name}</strong><br>${brewery.address}`;
-    ul.appendChild(li);
+  breweryInfo.innerHTML = `<h3>Breweries in ${state}:</h3>`; // Heading indicating the state
+  const ul = document.createElement('ul');       // Create an unordered list element to hold the brewery information
+  breweries.forEach(brewery => {                 // For each brewery,
+    const li = document.createElement('li');     // Create a list item element for each brewery
+    li.innerHTML = `<strong>${brewery.name}</strong><br>${brewery.address}`; // Set the item with the name & address
+    ul.appendChild(li);                          // Append the list item to the unordered list  
   });
+
+  //Append the unordered list to the breweryInfo section, displaying the list of breweries for the clicked state
   breweryInfo.appendChild(ul);
 }
