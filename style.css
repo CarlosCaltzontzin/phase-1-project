@@ -1,4 +1,9 @@
-/* Body attributes, the entire content of the web page */
+/* Body attributes, the entire content of the web page                                                     */
+/*                                                                                                          */
+/* background:                   Sets the background image of the entire webpage                            */
+/* center no-repeat:             Centers the background image and ensures it doesn't repeat                 */
+/* background-size: cover:       Ensures the background image covers the entire viewport                    */
+/* background-attachment: fixed: Fixes the background image in place, so it doesn't scroll with the content.*/
 body {
     background: url(https://cdn-p300.americantowns.com/img/article/il-breweries-1.jpg) center no-repeat;
     background-size: cover;
